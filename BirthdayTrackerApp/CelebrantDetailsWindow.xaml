@@ -1,0 +1,118 @@
+﻿<Window x:Class="BirthdayTrackerApp.CelebrantDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BirthdayTrackerApp"
+        mc:Ignorable="d"
+        Title="Celebrant Details" Height="430" Width="400">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Birthday Celebrant Details:"
+               FontSize="16" 
+               Grid.Row="0"
+               FontWeight="Bold"/>
+
+        <Grid Margin="10" Height="Auto" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- First Name -->
+            <Label x:Name="FirstNameLabel" 
+                   Content="First Name:"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="0 10"
+                   FontSize="10"/>
+
+            <TextBox x:Name="FirstNameTextBox"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Margin="0 10"/>
+
+            <!-- Last Name -->
+            <Label x:Name="LastNameLabel" 
+                   Content="Last Name:"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0 10"
+                   FontSize="10"/>
+
+            <TextBox x:Name="LastNameTextBox"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="0 10"/>
+
+            <!-- Phone Number -->
+            <Label x:Name="PhoneNumberLabel" 
+                   Content="Phone Number:" 
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Margin="0 10"
+                   FontSize="10"/>
+            <TextBox x:Name="PhoneNumberTextBox"
+                     Grid.Row="2"
+                     Grid.Column="1"
+                     Margin="0 10"/>
+
+            <!-- Email -->
+            <Label x:Name="EmailLabel" 
+                   Content="Email:" 
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Margin="0 10"
+                   FontSize="10"/>
+            <TextBox x:Name="EmailTextBox"
+                     Grid.Row="3"
+                     Grid.Column="1"
+                     Margin="0 10"/>
+
+            <!-- Birthday -->
+            <Label x:Name="BirthdayLabel" 
+                   Content="Birthday:" 
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   Margin="0 10"
+                   FontSize="10"/>
+
+            <DatePicker x:Name="BirthdayDatePicker"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Margin="0 10"/>
+
+            <!-- Update Button -->
+            <Button x:Name="UpdateButton"
+                    Content="Update"
+                    Click="UpdateButton_Click"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Margin="0 10"/>
+            
+            <!-- Delete Button-->
+            <Button x:Name="DeleteButton"
+                    Content="Delete"
+                    Click="DeleteButton_Click"
+                    Background="Red"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Margin="0 10"/>
+
+        </Grid>
+    </Grid>
+</Window>
