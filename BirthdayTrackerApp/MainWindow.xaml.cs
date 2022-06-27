@@ -59,7 +59,7 @@ namespace BirthdayTrackerApp
                 celebrants = connection.Table<Celebrant>().ToList();
 
                 filteredCelebrants = (from c in celebrants
-                                     where (now <= new DateTime(now.Year, c.BirthMonth, c.BirthDay) && new DateTime(now.Year, c.BirthMonth, c.BirthDay) <= now.AddDays(31))                                 
+                                     where (now.AddDays(-1) <= new DateTime(now.Year, c.BirthMonth, c.BirthDay) && new DateTime(now.Year, c.BirthMonth, c.BirthDay) <= now.AddDays(31))                                 
                                      orderby c.BirthMonth, c.BirthDay
                                      select c).ToList();
 
